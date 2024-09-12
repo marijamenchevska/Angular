@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit, computed, signal } from '@angular/core';
-import { Subscription, filter } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { CarsComponent } from '../cars/cars.component';
 import { FiltersComponent } from '../filters/filters.component';
 import { CarsService } from '../services/cars.service';
