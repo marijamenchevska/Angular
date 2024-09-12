@@ -1,0 +1,24 @@
+<app-filters
+  [searchWord]="searchWord()"
+  (onSearchWordChange)="searchWord.set($event)"
+  [priceFrom]="priceFrom()"
+  (onPriceFromChange)="priceFrom.set($event)"
+  [priceTo]="priceTo()"
+  (onPriceToChange)="priceTo.set($event)"
+  [year]="year()"
+  (onYearChange)="year.set($event)"
+  [carType]="carType()"
+  (onCarTypeChange)="carType.set($event)"
+  [fuelType]="fuelType()"
+  (onFuelTypeChange)="fuelType.set($event)"
+  [transmissionType]="transmissionType()"
+  (onTransmissionTypeChange)="transmissionType.set($event)"
+  [carCondition]="carCondition()"
+  (onCarConditionChange)="carCondition.set($event)"
+  [doors]="doors()"
+  (onDoorsChange)="doors.set($event)"
+  [seats]="seats()"
+  (onSeatsChange)="seats.set($event)"
+/>
+
+<app-cars [cars]="filteredCars()" />

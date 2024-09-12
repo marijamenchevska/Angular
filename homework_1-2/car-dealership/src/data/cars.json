@@ -1,0 +1,262 @@
+[
+  {
+    "id": "1",
+    "description": "Like new, well-maintained by a careful owner.",
+    "price": 150000,
+    "images": [
+      "../assets/car-images/BMW-3-series-1.jpg",
+      "../assets/car-images/BMW-3-series-2.jpg",
+      "../assets/car-images/BMW-3-series-3.jpg"
+    ],
+    "type": "Sedan",
+    "year": 2023,
+    "color": "White",
+    "fuelType": "Petrol",
+    "distance": 0,
+    "isNew": true,
+    "location": {
+      "city": "Skopje",
+      "country": "Macedonia"
+    },
+    "brand": "BMW",
+    "model": "3 Series",
+    "enginePower": 190,
+    "doors": 4,
+    "seats": 5,
+    "transmission": "Automatic"
+  },
+  {
+    "id": "2",
+    "description": "Sporty and stylish, perfect for city driving.",
+    "price": 120000,
+    "images": [
+      "../assets/car-images/Audi-A5-1.jpg",
+      "../assets/car-images/Audi-A5-2.jpg",
+      "../assets/car-images/Audi-A5-3.jpg"
+    ],
+    "type": "Coupe",
+    "year": 2022,
+    "color": "Red",
+    "fuelType": "Petrol",
+    "distance": 15000,
+    "isNew": false,
+    "location": {
+      "city": "Belgrade",
+      "country": "Serbia"
+    },
+    "brand": "Audi",
+    "model": "A5",
+    "enginePower": 180,
+    "doors": 2,
+    "seats": 4,
+    "transmission": "Manual"
+  },
+  {
+    "id": "3",
+    "description": "Perfect family car with ample space and comfort.",
+    "price": 220000,
+    "images": [
+      "../assets/car-images/Mercedes-GLE-1.jpg",
+      "../assets/car-images/Mercedes-GLE-2.jpg",
+      "../assets/car-images/Mercedes-GLE-3.jpg"
+    ],
+    "type": "SUV",
+    "year": 2024,
+    "color": "Black",
+    "fuelType": "Diesel",
+    "distance": 0,
+    "isNew": true,
+    "location": {
+      "city": "Zagreb",
+      "country": "Croatia"
+    },
+    "brand": "Mercedes",
+    "model": "GLE",
+    "enginePower": 210,
+    "doors": 4,
+    "seats": 5,
+    "transmission": "Automatic"
+  },
+  {
+    "id": "4",
+    "description": "Compact and efficient, ideal for urban use.",
+    "price": 95000,
+    "images": [
+      "../assets/car-images/Volkswagen-Golf-1.jpg",
+      "../assets/car-images/Volkswagen-Golf-2.jpg",
+      "../assets/car-images/Volkswagen-Golf-3.jpg"
+    ],
+    "type": "Hatchback",
+    "year": 2021,
+    "color": "Blue",
+    "fuelType": "Petrol",
+    "distance": 30000,
+    "isNew": false,
+    "location": {
+      "city": "Ljubljana",
+      "country": "Slovenia"
+    },
+    "brand": "Volkswagen",
+    "model": "Golf",
+    "enginePower": 110,
+    "doors": 4,
+    "seats": 5,
+    "transmission": "Manual"
+  },
+  {
+    "id": "5",
+    "description": "Luxury convertible, perfect for summer drives.",
+    "price": 300000,
+    "images": [
+      "../assets/car-images/Porsche-911-1.jpg",
+      "../assets/car-images/Porsche-911-2.jpg",
+      "../assets/car-images/Porsche-911-3.jpg"
+    ],
+    "type": "Convertible",
+    "year": 2023,
+    "color": "Silver",
+    "fuelType": "Petrol",
+    "distance": 0,
+    "isNew": true,
+    "location": {
+      "city": "Split",
+      "country": "Croatia"
+    },
+    "brand": "Porsche",
+    "model": "911",
+    "enginePower": 250,
+    "doors": 2,
+    "seats": 4,
+    "transmission": "Automatic"
+  },
+  {
+    "id": "6",
+    "description": "Electric car with cutting-edge technology.",
+    "price": 280000,
+    "images": [
+      "../assets/car-images/Tesla-Model-S-1.jpg",
+      "../assets/car-images/Tesla-Model-S-2.jpg",
+      "../assets/car-images/Tesla-Model-S-3.jpg"
+    ],
+    "type": "Sedan",
+    "year": 2024,
+    "color": "White",
+    "fuelType": "Electric",
+    "distance": 0,
+    "isNew": true,
+    "location": {
+      "city": "Vienna",
+      "country": "Austria"
+    },
+    "brand": "Tesla",
+    "model": "Model S",
+    "enginePower": 350,
+    "doors": 4,
+    "seats": 5,
+    "transmission": "Automatic"
+  },
+  {
+    "id": "7",
+    "description": "Rugged SUV, great for off-road adventures.",
+    "price": 200000,
+    "images": [
+      "../assets/car-images/Land-Rover-Defender-1.jpg",
+      "../assets/car-images/Land-Rover-Defender-2.jpg",
+      "../assets/car-images/Land-Rover-Defender-3.jpg"
+    ],
+    "type": "SUV",
+    "year": 2022,
+    "color": "Green",
+    "fuelType": "Diesel",
+    "distance": 25000,
+    "isNew": false,
+    "location": {
+      "city": "Sofia",
+      "country": "Bulgaria"
+    },
+    "brand": "Land Rover",
+    "model": "Defender",
+    "enginePower": 220,
+    "doors": 4,
+    "seats": 5,
+    "transmission": "Manual"
+  },
+  {
+    "id": "8",
+    "description": "Elegant coupe with powerful performance.",
+    "price": 250000,
+    "images": [
+      "../assets/car-images/Mercedes-C-Class-Coupe-1.jpg",
+      "../assets/car-images/Mercedes-C-Class-Coupe-2.jpg",
+      "../assets/car-images/Mercedes-C-Class-Coupe-3.jpg"
+    ],
+    "type": "Coupe",
+    "year": 2023,
+    "color": "Black",
+    "fuelType": "Petrol",
+    "distance": 0,
+    "isNew": true,
+    "location": {
+      "city": "Prague",
+      "country": "Czech Republic"
+    },
+    "brand": "Mercedes",
+    "model": "C-Class Coupe",
+    "enginePower": 200,
+    "doors": 2,
+    "seats": 4,
+    "transmission": "Automatic"
+  },
+  {
+    "id": "9",
+    "description": "Affordable and reliable sedan for daily use.",
+    "price": 100000,
+    "images": [
+      "../assets/car-images/Toyota-Corolla-1.jpg",
+      "../assets/car-images/Toyota-Corolla-2.jpg",
+      "../assets/car-images/Toyota-Corolla-3.jpg"
+    ],
+    "type": "Sedan",
+    "year": 2022,
+    "color": "Gray",
+    "fuelType": "Petrol",
+    "distance": 35000,
+    "isNew": false,
+    "location": {
+      "city": "Budapest",
+      "country": "Hungary"
+    },
+    "brand": "Toyota",
+    "model": "Corolla",
+    "enginePower": 100,
+    "doors": 4,
+    "seats": 5,
+    "transmission": "Manual"
+  },
+  {
+    "id": "10",
+    "description": "Compact hatchback with great fuel efficiency.",
+    "price": 85000,
+    "images": [
+      "../assets/car-images/Ford-Focus-1.jpg",
+      "../assets/car-images/Ford-Focus-2.jpg",
+      "../assets/car-images/Ford-Focus-3.jpg"
+    ],
+    "type": "Hatchback",
+    "year": 2021,
+    "color": "Yellow",
+    "fuelType": "Petrol",
+    "distance": 40000,
+    "isNew": false,
+    "location": {
+      "city": "Warsaw",
+      "country": "Poland"
+    },
+    "brand": "Ford",
+    "model": "Focus",
+    "enginePower": 90,
+    "doors": 4,
+    "seats": 5,
+    "transmission": "Manual"
+  }
+]

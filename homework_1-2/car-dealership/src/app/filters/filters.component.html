@@ -1,0 +1,119 @@
+<div class="search">
+  <mat-icon fontIcon="search" />
+  <mat-form-field>
+    <mat-label class="labels">Search</mat-label>
+    <input
+      matInput
+      class="search-bar"
+      type="search"
+      [value]="searchWord()"
+      (input)="onSearchWordChange.emit($any($event).target.value)"
+    />
+  </mat-form-field>
+</div>
+
+<p class="labels">Filters</p>
+
+<div class="price-label labels">Price range</div>
+
+<div class="price-range">
+  <div class="prices">{{ priceFrom()?.toLocaleString() }}</div>
+  <div class="prices price-separator">-</div>
+  <div class="prices">{{ priceTo()?.toLocaleString() }}</div>
+</div>
+
+<mat-slider min="2000" max="500000">
+  <input
+    matSliderStartThumb
+    [ngModel]="priceFrom()"
+    (ngModelChange)="onPriceFromChange.emit($event)"
+  />
+  <input
+    matSliderEndThumb
+    [ngModel]="priceTo()"
+    (ngModelChange)="onPriceToChange.emit($event)"
+  />
+</mat-slider>
+
+<mat-form-field>
+  <mat-label class="labels">Choose year</mat-label>
+  <mat-select [ngModel]="year()" (ngModelChange)="onYearChange.emit($event)">
+    <mat-option></mat-option>
+    @for (year of yearSelection; track year) {
+    <mat-option [value]="year">{{ year }}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label class="labels">Choose type</mat-label>
+  <mat-select
+    [ngModel]="carType()"
+    (ngModelChange)="onCarTypeChange.emit($event)"
+  >
+    <mat-option></mat-option>
+    @for (type of carTypes; track type) {
+    <mat-option [value]="type">{{ type }}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>
+
+<label class="labels filter-padding">Choose fuel type</label>
+<mat-radio-group>
+  @for (type of fuelTypes; track type) {
+  <mat-radio-button
+    [value]="type"
+    [checked]="type === fuelType()"
+    (click)="onFuelTypeChange.emit(type)"
+    >{{ type }}</mat-radio-button
+  >
+  }
+</mat-radio-group>
+
+<label class="labels filter-padding">Choose transmission</label>
+<mat-radio-group>
+  @for (type of transmissionTypes; track type) {
+  <mat-radio-button
+    [value]="type"
+    [checked]="type === transmissionType()"
+    (click)="onTransmissionTypeChange.emit(type)"
+    >{{ type }}</mat-radio-button
+  >
+  }
+</mat-radio-group>
+
+<label class="labels filter-padding">Choose car condition</label>
+<mat-radio-group>
+  @for (condition of carConditions; track condition) {
+  <mat-radio-button
+    [value]="condition"
+    [checked]="condition === carCondition()"
+    (click)="onCarConditionChange.emit(condition)"
+    >{{ condition }}</mat-radio-button
+  >
+  }
+</mat-radio-group>
+
+<mat-form-field>
+  <mat-label class="labels">Doors</mat-label>
+  <input
+    matInput
+    min="2"
+    max="5"
+    type="number"
+    [ngModel]="doors()"
+    (ngModelChange)="onDoorsChange.emit($event)"
+  />
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label class="labels">Seats</mat-label>
+  <input
+    matInput
+    min="2"
+    max="9"
+    type="number"
+    [ngModel]="seats()"
+    (ngModelChange)="onSeatsChange.emit($event)"
+  />
+</mat-form-field>
