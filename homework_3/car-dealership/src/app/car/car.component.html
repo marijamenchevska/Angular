@@ -1,0 +1,25 @@
+<mat-card appearance="raised" routerLink="cars/{{ car()?.id }}">
+  <mat-card-title-group>
+    <mat-card-title>{{ car()?.brand }} {{ car()?.model }}</mat-card-title>
+    <mat-card-subtitle
+      ><span id="subtitle-text"
+        >{{ car()?.year }} | {{ car()?.isNew ? "New" : "Used" }}</span
+      >
+
+      @if(car()?.isNew) {
+      <mat-icon fontIcon="star" />
+      } @else {
+      <mat-icon fontIcon="star_half" />
+      }
+    </mat-card-subtitle>
+    <img mat-card-image [src]="car()?.images?.[0]" />
+  </mat-card-title-group>
+
+  <mat-card-content>
+    <p>{{ car()?.description }}</p>
+    <p id="price">
+      <mat-icon fontIcon="payments" />
+      <span>${{ car()?.price?.toLocaleString() }}</span>
+    </p>
+  </mat-card-content>
+</mat-card>

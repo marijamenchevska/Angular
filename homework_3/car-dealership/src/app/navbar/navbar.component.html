@@ -1,0 +1,23 @@
+<nav>
+  <ul>
+    <li>
+      <!-- routerLinkActiveOptions will activate only the exact match of the route and not its children, i.e. all other routes in this case  -->
+      <a
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        ><img src="../../../public/logo.png"
+      /></a>
+    </li>
+    <li>
+      <a
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+      >
+    </li>
+    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+    <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+  </ul>
+</nav>

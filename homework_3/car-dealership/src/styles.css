@@ -1,0 +1,70 @@
+:root {
+  --text-color: darkslategray;
+  --nav-background-color: #96b2a9;
+  --lighter-text-color: #4e8383;
+  --main-background-color: #a9c9bf;
+  --select-panel-background-color: #bbd4cc;
+  --selection-color: white;
+}
+
+html {
+  --mdc-filled-text-field-container-color: transparent;
+  --mat-select-enabled-arrow-color: var(--text-color);
+  --mat-select-focused-arrow-color: var(--selection-color);
+  --mdc-filled-text-field-label-text-color: var(--text-color);
+  --mdc-filled-text-field-focus-label-text-color: var(--selection-color);
+  --mdc-filled-text-field-hover-label-text-color: var(--text-color);
+  --mdc-filled-text-field-focus-active-indicator-color: var(--selection-color);
+  --mdc-filled-text-field-active-indicator-color: var(--text-color);
+  --mdc-filled-text-field-hover-active-indicator-color: var(--text-color);
+  --mat-select-panel-background-color: var(--select-panel-background-color);
+  --mat-option-selected-state-label-text-color: var(--text-color);
+  --mat-option-hover-state-layer-color: var(--main-background-color);
+  --mat-option-selected-state-layer-color: var(--main-background-color);
+  --mat-select-enabled-trigger-text-color: var(--text-color);
+  --mdc-filled-text-field-input-text-color: var(--text-color);
+  --mdc-slider-handle-color: var(--text-color);
+  --mdc-slider-active-track-color: var(--text-color);
+  --mdc-slider-focus-handle-color: var(--text-color);
+  --mat-slider-ripple-color: var(--text-color);
+  --mat-slider-focus-state-layer-color: rgba(48, 80, 80, 0.2);
+  --mat-slider-hover-state-layer-color: rgba(48, 80, 80, 0.05);
+  --mdc-slider-inactive-track-color: var(--lighter-text-color);
+  --mat-paginator-container-background-color: transparent;
+  --mat-paginator-container-text-size: 1rem;
+  --mat-paginator-select-trigger-text-size: 1rem;
+  --mdc-outlined-text-field-focus-outline-color: var(--text-color);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--main-background-color);
+}
+
+.mat-primary {
+  --mat-minimal-pseudo-checkbox-selected-checkmark-color: var(--text-color);
+}
+
+.mat-mdc-radio-button {
+  --mdc-form-field-label-text-color: var(--text-color);
+}
+
+.mat-mdc-radio-button.mat-accent {
+  --mdc-radio-unselected-icon-color: var(--text-color);
+  --mdc-radio-unselected-hover-icon-color: var(--nav-background-color);
+  --mdc-radio-selected-focus-icon-color: var(--text-color);
+  --mdc-radio-selected-icon-color: var(--text-color);
+  --mdc-radio-selected-hover-icon-color: var(--text-color);
+  --mdc-radio-selected-pressed-icon-color: var(--text-color);
+  --mat-radio-checked-ripple-color: var(--text-color);
+}
+
+.mat-mdc-paginator-outer-container {
+  height: 100%;
+}
