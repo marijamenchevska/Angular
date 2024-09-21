@@ -1,0 +1,37 @@
+<app-filters
+  [searchWord]="searchWord()"
+  (onSearchWordChange)="searchWord.set($event)"
+  [priceFrom]="priceFrom()"
+  (onPriceFromChange)="priceFrom.set($event)"
+  [priceTo]="priceTo()"
+  (onPriceToChange)="priceTo.set($event)"
+  [year]="year()"
+  (onYearChange)="year.set($event)"
+  [carType]="carType()"
+  (onCarTypeChange)="carType.set($event)"
+  [fuelType]="fuelType()"
+  (onFuelTypeChange)="fuelType.set($event)"
+  [transmissionType]="transmissionType()"
+  (onTransmissionTypeChange)="transmissionType.set($event)"
+  [carCondition]="carCondition()"
+  (onCarConditionChange)="carCondition.set($event)"
+  [doors]="doors()"
+  (onDoorsChange)="doors.set($any($event))"
+  [seats]="seats()"
+  (onSeatsChange)="seats.set($any($event))"
+/>
+
+<div id="home-container">
+  <app-loader [loader]="loader()" />
+
+  <app-cars [cars]="(cars$ | async) || []" />
+
+  @if(!loader()) {
+  <mat-paginator
+    [length]="total()"
+    [pageSize]="pageSize()"
+    [pageSizeOptions]="[5, 10, 25, 50]"
+    (page)="page.set($event.pageIndex); pageSize.set($event.pageSize)"
+  />
+  }
+</div>

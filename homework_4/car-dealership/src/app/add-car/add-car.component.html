@@ -1,0 +1,134 @@
+<h2>Add a car</h2>
+
+<form [formGroup]="carForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <mat-label>Brand</mat-label>
+    <input matInput type="text" formControlName="brand" />
+    <mat-error>{{ brandErrors }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Model</mat-label>
+    <input matInput type="text" formControlName="model" />
+    <mat-error>{{ modelErrors }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <textarea matInput type="text" formControlName="description"></textarea>
+    <mat-error>{{ descriptionErrors }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Price</mat-label>
+    <input
+      matInput
+      type="number"
+      min="1"
+      max="1000000000"
+      formControlName="price"
+    />
+    <mat-error>{{ priceErrors }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Year</mat-label>
+    <input
+      matInput
+      type="number"
+      min="1990"
+      [max]="currentYear"
+      formControlName="year"
+    />
+    <mat-error>{{ yearErrors }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Type</mat-label>
+    <mat-select formControlName="type">
+      @for(type of carType; track type) {
+      <mat-option [value]="type">{{ type }}</mat-option>
+      }
+    </mat-select>
+    <mat-error>{{ typeErrors }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>City</mat-label>
+    <input matInput type="text" formControlName="city" />
+    <mat-error>{{ cityErrors }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Country</mat-label>
+    <input matInput type="text" formControlName="country" />
+    <mat-error>{{ countryErrors }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Condition</mat-label>
+    <mat-select formControlName="isNew">
+      @for(condition of carCondition; track condition) {
+      <mat-option [value]="condition">{{ condition }}</mat-option>
+      }
+    </mat-select>
+    <mat-error>{{ conditionError }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Distance</mat-label>
+    <input matInput type="number" formControlName="distance" />
+    <mat-error>{{ formError ? formError : distanceError }}</mat-error>
+
+    <pre>{{ formError }}</pre>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Color</mat-label>
+    <input matInput type="text" formControlName="color" />
+    <mat-error>{{ colorError }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Fuel</mat-label>
+    <mat-select formControlName="fuelType">
+      @for(type of fuelType; track type) {
+      <mat-option [value]="type">{{ type }}</mat-option>
+      }
+    </mat-select>
+    <mat-error>{{ fuelError }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Transmission</mat-label>
+    <mat-select formControlName="transmission">
+      @for(type of transmissionType; track type) {
+      <mat-option [value]="type">{{ type }}</mat-option>
+      }
+    </mat-select>
+    <mat-error>{{ transmissionError }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Engine Power</mat-label>
+    <input matInput type="number" formControlName="enginePower" />
+    <mat-error>{{ enginePowerErrors }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Doors</mat-label>
+    <input matInput type="number" formControlName="doors" />
+    <mat-error>{{ doorsErrors }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Seats</mat-label>
+    <input matInput type="number" formControlName="seats" />
+    <mat-error>{{ seatsErrors }}</mat-error>
+  </mat-form-field>
+
+  <button mat-fab extended type="submit">
+    <mat-icon fontIcon="add" />
+    Add car
+  </button>
+</form>

@@ -1,0 +1,35 @@
+nav {
+  background-color: var(--nav-background-color);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+li {
+  cursor: pointer;
+  font-size: x-large;
+}
+
+li:hover {
+  color: var(--lighter-text-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  height: 8vh;
+}
+
+.active {
+  color: var(--selection-color);
+}

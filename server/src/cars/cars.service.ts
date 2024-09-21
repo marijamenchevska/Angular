@@ -10,7 +10,9 @@ import { Car } from './entities/car.entity';
 import { Repository } from 'typeorm';
 import { QueryCarDto } from './dto/query-car.dto';
 import { CurrentUser } from '../common/types/current-user.interface';
-import generateFakeCars from '../common/fakers/generate-fake-cars.helper';
+import generateFakeCars, {
+  generateFakeImages,
+} from '../common/fakers/generate-fake-cars.helper';
 import { User } from '../users/entities/user.entity';
 
 @Injectable()
@@ -23,6 +25,7 @@ export class CarsService {
   create(createCarDto: CreateCarDto, user: CurrentUser) {
     return this.carRepository.save({
       ...createCarDto,
+      images: generateFakeImages(),
       sellerId: user.userId,
     });
   }

@@ -1,0 +1,24 @@
+* {
+  color: var(--text-color);
+}
+
+#about-page {
+  padding: 3rem 20rem;
+}
+
+#main-title {
+  font-size: xx-large;
+}
+
+.title {
+  font-size: x-large;
+}
+
+#main-title,
+.title {
+  font-weight: 600;
+}
+
+.paragraph {
+  font-size: large;
+}

@@ -107,3 +107,19 @@ export default function generateFakeCars(
 
   return cars;
 }
+
+export function generateFakeImages() {
+  return faker.helpers.arrayElements(
+    [
+      `./car-images/${faker.number.int({ min: 1, max: 30 })}.jpg`,
+      `./car-images/${faker.number.int({ min: 1, max: 30 })}.jpg`,
+      `./car-images/${faker.number.int({ min: 1, max: 30 })}.jpg`,
+      `./car-images/${faker.number.int({ min: 1, max: 30 })}.jpg`,
+      `./car-images/${faker.number.int({ min: 1, max: 30 })}.jpg`,
+    ],
+    {
+      min: 1,
+      max: 5,
+    },
+  );
+}

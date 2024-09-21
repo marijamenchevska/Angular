@@ -1,0 +1,85 @@
+<app-loader [loader]="loader()" />
+
+@if(car) {
+<div id="page">
+  <div id="images">
+    <div id="small-images">
+      @for(image of car.images; track image) {
+      <img [src]="image" (click)="largeCarImage.set(image)" />
+      }
+    </div>
+    <div id="large-image">
+      <img [src]="largeCarImage()" />
+    </div>
+  </div>
+
+  <div id="text-container">
+    <div id="title">
+      <span>{{ car.brand }} {{ car.model }}</span>
+      <span>${{ car.price.toLocaleString() }}</span>
+    </div>
+
+    <p>{{ car.description }}</p>
+
+    <div id="details-container">
+      <div class="grid-cell">
+        <mat-icon fontIcon="directions_car" />
+        <span class="details">Type:</span>
+        <span>{{ car.type }}</span>
+      </div>
+      <div class="grid-cell">
+        <mat-icon fontIcon="calendar_today" />
+        <span class="details">Year:</span>
+        <span>{{ car.year }}</span>
+      </div>
+      <div class="grid-cell">
+        <mat-icon fontIcon="pin_drop" />
+        <span class="details">Location:</span>
+        <span>{{ car.location.city }}, {{ car.location.country }}</span>
+      </div>
+      <div class="grid-cell">
+        <mat-icon fontIcon="star" />
+        <span class="details">Condition:</span>
+        <span>{{ car.isNew ? "New" : "Used" }}</span>
+      </div>
+      <div class="grid-cell">
+        <mat-icon fontIcon="local_gas_station" />
+        <span class="details">Fuel:</span>
+        <span>{{ car.fuelType }}</span>
+      </div>
+      <div class="grid-cell">
+        <mat-icon fontIcon="auto_transmission" />
+        <span class="details">Transmission:</span>
+        <span>{{ car.transmission }}</span>
+      </div>
+      <div class="grid-cell">
+        <mat-icon fontIcon="road" />
+        <span class="details">Distance:</span>
+        <span>{{ car.distance.toLocaleString() }} km</span>
+      </div>
+      <div class="grid-cell">
+        <mat-icon fontIcon="bolt" />
+        <span class="details">Engine power:</span>
+        <span>{{ car.enginePower }} hp</span>
+      </div>
+      <div class="grid-cell">
+        <mat-icon fontIcon="palette" />
+        <span class="details">Color:</span>
+        <span>{{ car.color }}</span>
+      </div>
+      <div class="grid-cell">
+        <mat-icon fontIcon="door_back" />
+        <span class="details">Doors:</span>
+        <span>{{ car.doors }}</span>
+      </div>
+      <div class="grid-cell">
+        <mat-icon fontIcon="airline_seat_recline_extra" />
+        <span class="details">Seats:</span>
+        <span>{{ car.seats }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+} @else {
+<app-not-found />
+}
